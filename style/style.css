@@ -9,8 +9,164 @@ html {
   font-family: "Avenir", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
-
+main {
+  padding: 1rem;
+}
 img {
+  display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Top Navigation Bar */
+.topNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: pink;
+  padding: 1rem;
+}
+
+.topNav ul {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: nowrap;
+}
+
+.topNav ul li {
+  margin: 0 3vw;
+}
+
+.topNav ul li a:hover {
+  font-weight: 900;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.breadcrumbs li::after {
+  display: inline-block;
+  margin: 0 1rem;
+  content: ">";
+}
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+.breadcrumbs li a:hover {
+  font-weight: 900;
+}
+/* Footer Styling */
+footer {
+  padding: 1rem;
+  background-color: pink;
+  margin-top: 1rem;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerNav ul {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.product main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* PRODUCT PAGE */
+
+/* Purchase Box Section */
+.purchaseBox {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchaseBox form {
+  margin: 1rem 0;
+}
+
+.purchaseBox form label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.purchaseBox form label select {
+  padding: 1rem 1rem;
+  margin-left: 2rem;
+  border: solid black 3px;
+  background-color: pink;
+  border-radius: 15px;
+  font-weight: 900;
+}
+
+.purchaseBox form button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: pink;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-weight: 900;
+}
+/* not sure if going to add effect or colour change */
+/* .purchaseBox form button:hover {
+  background-color: red;
+} */
+
+/* Product Information */
+dl dt {
+  margin: 0.4rem 0;
+  font-weight: bold;
+}
+dl dd {
+  margin: 0;
+  padding: 0 0 0.4rem 1rem;
+}
+
+/* Brand Information */
+.brandInfo {
+  border-top: lightgrey 2px solid;
+}
+.brandInfo h1 {
+  font-size: xx-large;
+}
+
+.brandInfo p {
+  padding-left: 1rem;
+}
+
+/* RESPONSIVE PRODUCT PAGE */
+@media screen and (min-width: 1000px) {
+  .product main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product img {
+    grid-column: 1;
+  }
+  .purchaseBox {
+    grid-column: span 1;
+  }
+  .productInfo {
+    grid-column: span 1;
+    grid-template-columns: 1fr 1fr;
+  }
 }
