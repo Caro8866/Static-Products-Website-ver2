@@ -53,6 +53,7 @@ a {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  grid-column: 1 / -1;
 }
 .breadcrumbs li::after {
   display: inline-block;
@@ -154,7 +155,7 @@ dl dd {
   padding-left: 1rem;
 }
 
-/* RESPONSIVE PRODUCT PAGE */
+/* DESKTOP */
 @media screen and (min-width: 1000px) {
   .product main {
     grid-template-columns: 1fr 1fr;
@@ -168,5 +169,141 @@ dl dd {
   .productInfo {
     grid-column: span 1;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* PRODUCT LIST */
+.productlist main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+}
+
+.productList article {
+  display: flex;
+  flex-direction: column;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+.productCard h3 {
+  margin-top: 0.4rem;
+}
+
+/* .subtitle {
+  flex-grow: 3;
+} */
+
+.productCard p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.productCard a {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: pink;
+  border: solid 3px black;
+  border-radius: 10px;
+}
+/* not sure if going to add effect or colour change 
+.productCard a:hover {
+  background-color: black;
+  color:white;
+*/
+/* COPIED */
+.discounted {
+  display: none;
+  visibility: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.discounted p {
+  width: fit-content;
+  display: block;
+  margin-bottom: 0;
+}
+
+/* .discount p:last-of-type {
+  background-color: rgba(228, 6, 54, 1);
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--bg-color);
+  border-radius: 0.2rem;
+} */
+
+.onSale .discount ~ p {
+  color: var(--sub-color);
+  text-decoration: solid line-through 2px rgba(228, 6, 54, 1);
+}
+
+.onSale .discount {
+  visibility: visible;
+  display: flex;
+}
+
+.saleLabel {
+  display: none;
+  visibility: hidden;
+}
+
+.onSale .saleLabel {
+  background-color: red;
+  display: block;
+  visibility: visible;
+  position: absolute;
+  padding: 0.3rem 1rem;
+}
+
+/* .productList article.soldOut:after {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  content: "SOLD OUT";
+  background: var(--main-color);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  color: var(--bg-color);
+} */
+
+.soldOut img {
+  opacity: 0.5;
+  filter: saturate(0);
+}
+
+/* BRAND CATEGORY */
+/*  category  */
+/*Category*/
+.letterNav ol {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: xx-large;
+}
+
+.brands li {
+  padding: 0.7rem;
+  margin: 0rem;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brands li:hover {
+  background-color: pink;
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 726px) {
+  .brands ol {
+    column-count: 2;
   }
 }
