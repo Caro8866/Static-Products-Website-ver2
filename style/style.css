@@ -190,10 +190,6 @@ dl dd {
   margin-top: 0.4rem;
 }
 
-/* .subtitle {
-  flex-grow: 3;
-} */
-
 .productCard p {
   font-size: 1.1rem;
   margin-top: 0.5rem;
@@ -212,7 +208,7 @@ dl dd {
 /* not sure if going to add effect or colour change 
 .productCard a:hover {
   background-color: black;
-  color:white;
+  color:white;}
 */
 /* COPIED */
 .discounted {
@@ -229,21 +225,12 @@ dl dd {
   display: block;
   margin-bottom: 0;
 }
-
-/* .discount p:last-of-type {
-  background-color: rgba(228, 6, 54, 1);
-  padding: 0.4rem;
-  font-size: 0.9rem;
-  color: var(--bg-color);
-  border-radius: 0.2rem;
-} */
-
-.onSale .discount ~ p {
-  color: var(--sub-color);
+.onSale .discounted ~ p {
+  color: red;
   text-decoration: solid line-through 2px rgba(228, 6, 54, 1);
 }
 
-.onSale .discount {
+.onSale .discounted {
   visibility: visible;
   display: flex;
 }
@@ -260,8 +247,7 @@ dl dd {
   position: absolute;
   padding: 0.3rem 1rem;
 }
-
-/* .productList article.soldOut:after {
+*/ .productList article.soldOut:after {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -270,7 +256,7 @@ dl dd {
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   color: var(--bg-color);
-} */
+}
 
 .soldOut img {
   opacity: 0.5;

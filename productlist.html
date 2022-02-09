@@ -24,24 +24,25 @@
         <li><a href="category.html">BRANDS</a></li>
         <li>NIKE</li>
       </ol>
-      <article class="productCard">
-        <p class="saleLabel">SALE</p>
-        <img
-          src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
-          alt="Blue Tshirt with Sahara text on front"
-        />
-        <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-        <p class="subtitle">T-SHIRTS | NIKE</p>
-        <p class="price">DKK 1595,-</p>
+      <template id="productTemplate">
+        <article class="productCard">
+          <p class="saleLabel">SALE</p>
+          <img
+            src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+            alt="Blue Tshirt with Sahara text on front"
+          />
+          <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+          <p class="subtitle">T-SHIRTS | NIKE</p>
+          <div class="discounted">
+            <p>DKK 895,-</p>
+          </div>
+          <p class="price">DKK 1595,-</p>
 
-        <div class="discounted">
-          <p>DKK 895,-</p>
-          <p>-34%</p>
-        </div>
-        <a href="product.html">ADD TO CART</a>
-      </article>
+          <a href="product.html">ADD TO CART</a>
+        </article>
+      </template>
       <!-- repeated cards -->
-      <article class="productCard onSale">
+      <!-- <article class="productCard onSale">
         <p class="saleLabel">SALE</p>
 
         <img
@@ -233,6 +234,7 @@
         </div>
         <a href="product.html">ADD TO CART</a>
       </article>
+     -->
     </main>
 
     <footer class="footerNav">
@@ -246,6 +248,6 @@
       </nav>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/productlist.js"></script>
   </body>
 </html>
