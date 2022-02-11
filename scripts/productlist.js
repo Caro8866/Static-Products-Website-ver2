@@ -47,6 +47,7 @@ function showProduct(product) {
   //sold out
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
+    copy.querySelector("article a").textContent = "SOLD OUT";
   }
   // discounted price
   if (product.discount) {

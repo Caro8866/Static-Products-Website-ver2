@@ -205,6 +205,9 @@ dl dd {
   border: solid 3px black;
   border-radius: 10px;
 }
+.productCard:hover {
+  transform: scale(1.02);
+}
 /* not sure if going to add effect or colour change 
 .productCard a:hover {
   background-color: black;
@@ -261,6 +264,11 @@ dl dd {
 .soldOut img {
   opacity: 0.5;
   filter: saturate(0);
+}
+
+.soldOut a {
+  background: black;
+  color: white;
 }
 
 /* BRAND CATEGORY */
