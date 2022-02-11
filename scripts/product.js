@@ -42,8 +42,11 @@ function showProduct(product) {
     product.id;
 
   // Brand Info
-  document.querySelector(".brandInfo img").src = product.brandimage;
-  document.querySelector(".brandInfo img").alt =
-    product.brandname + " Brand Logo";
+  if (product.brandimage) {
+    document.querySelector(".brandInfo img").src = product.brandimage;
+    document.querySelector(".brandInfo img").alt =
+      product.brandname + " Brand Logo";
+  }
+
   document.querySelector(".brandInfo p").textContent = product.brandbio;
 }
