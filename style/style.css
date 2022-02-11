@@ -282,6 +282,10 @@ dl dd {
   justify-content: flex-start;
   align-items: center;
 }
+.brands h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
 
 .brands li:hover {
   background-color: pink;

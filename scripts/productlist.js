@@ -1,4 +1,9 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
+// const url = "https://kea-alt-del.dk/t7/api/products";
+
+const urlParams = new URLSearchParams(window.location.search);
+const brand = urlParams.get("brandname");
+
+const url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brand;
 
 fetch(url)
   .then(function (res) {
@@ -47,8 +52,10 @@ function showProduct(product) {
   if (product.discount) {
     copy.querySelector("article").classList.add("onSale");
     copy.querySelector(".discounted p").textContent =
-      Math.ceil((product.discount / 100) * product.price) + "DKK";
+      Math.ceil((product.discount / 100) * product.price) + " DKK";
   }
+  copy.querySelector("a").setAttribute("href", `product.html?id=${product.id}`);
+
   // GRAB PARENT
   const parent = document.querySelector("main");
 
